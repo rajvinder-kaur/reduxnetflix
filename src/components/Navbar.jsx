@@ -1,25 +1,55 @@
 import React from 'react';
+import { useEffect , useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../SassFiles/Nav.css';
 
 
-function Navbar() {
-    return (
-        <div className='nav'>
-            <div className="content">
-                <div className="logo">
-                    <Link to="/">
-                        <img src="https://imgix.bustle.com/uploads/image/2017/8/29/c8c8077a-10fc-44d5-93f0-da4e592a299e-netflix-logo-print_pms.jpg?w=1200&h=630&fit=crop&crop=faces&fm=jpg" alt="logo" width="100%" />
-                    </Link>
+function Navbar({ title }) {
+const [ show,handleShow] = useState(false)
+const transition = () =>{
+    if (window.scrollY > 500){
+        handleShow(true)
+    }else{
+        handleShow(false)
+    }
+}
+    useEffect(()=>{
+        window.addEventListener("scroll",transition)
+        return()=> window.removeEventListener("scroll",transition)
+    })
+
+    if (title == "Home") {
+        return (
+            <div className={`nav ${show && "nav_black"}`}>
+                <div className="content">
+                    <div className="logo">
+                            <img src="https://andrewjamesspooner.com/wp-content/uploads/2019/06/netflix-logo-e1536243210766-1024x284.png" alt="logo" width="100%" />
+                        <div className="user" >
+                            <Link to="/main">
+                                <img src="https://www.pngkit.com/png/full/115-1150342_user-avatar-icon-iconos-de-mujeres-a-color.png" alt="user" width="100%" />
+                            </Link>
+                        </div>
+                    </div>
                 </div>
-                <div className="user" >
-                    <Link to="/">
-                        <img src="https://www.pngkit.com/png/full/115-1150342_user-avatar-icon-iconos-de-mujeres-a-color.png" alt="user" width="100%" />
-                    </Link>
+            </div>)
+    } else {
+        return (
+            <div className='nav'>
+                <div className="content">
+                    <div className="logo">
+                        <Link to="/">
+                            <img src="https://andrewjamesspooner.com/wp-content/uploads/2019/06/netflix-logo-e1536243210766-1024x284.png" alt="logo" width="100%" />
+                        </Link>
+                        <div className="signin">
+                            <button>
+                                <Link to="/signin">{title}</Link>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default Navbar

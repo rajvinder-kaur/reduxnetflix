@@ -1,14 +1,12 @@
 .nav {
-  background-color: black;
   position: fixed;
   top: 0;
   padding: 10px;
-  background-color: black;
   width: 100%;
   height: 50px;
   z-index: 6;
   transition-timing-function: ease-in;
-  transition: all 0.5s;
+  transition: all 0.1s;
 }
 .nav .content {
   display: flex;
@@ -20,9 +18,15 @@
   cursor: pointer;
   left: 20px;
   z-index: 5;
+  top: 20px;
 }
 .nav .content .user {
   position: fixed;
   width: 50px;
   right: 20px;
+  top: 10px;
+}
+
+.nav_black {
+  background-color: black;
 }/*# sourceMappingURL=Nav.css.map */

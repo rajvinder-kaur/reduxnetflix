@@ -1,17 +1,51 @@
-.sign
-    width: 50%
-    max-width: 300px
-    padding-left: 70px
-    padding-right: 70px
-    padding-top: -3px
-    padding-bottom: 50px
-    position: absolute
-    border-radius: 4px
-    top: 50%
-    left: 50%
-    transform: translate(-50%,-50%)
-    background-color: #13111179
-    color: white
+@import "variables.sass"
+.signin
+    .content
+        display: flex
+        justify-content: space-between
+        .logo
+            position: fixed
+            width: 100px
+            cursor: pointer
+            left: 20px
+            z-index: 5
+            top: 20px
+            .user
+                position: fixed
+                width: 50px
+                right: 20px
+                top: 10px
+            .signin
+                position: fixed
+                right: 20px
+                top: 20px
+                z-index: 2
+            button
+                padding: 0.5rem
+                background-color: #da0303
+                border: none
+                color: $color_main
+                border-radius: 3px
+                font-family: $font
+                a
+                    color: white
+                    text-decoration: none
+                    
+    .sign
+        width: 50%
+        max-width: 300px
+        padding-left: 70px
+        padding-right: 70px
+        padding-top: -3px
+        padding-bottom: 50px
+        position: absolute
+        border-radius: 4px
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        background-color: #13111179
+        color: white
+
     form
         display: grid
         flex-direction: column
@@ -25,7 +59,9 @@
             padding: 10px
             outline-width: 0px
             height: 30px
-            margin-bottom: 5%
+            border: none
+            margin-bottom: 4%
+            border-radius: 7px
         button
             padding: 16px 20px
             font-size: 1rem
@@ -33,3 +69,13 @@
             background-color: #da0303
             border: none
             cursor: pointer
+            border-radius: 7px
+            margin-top: 20px
+            a
+                color: $color_main
+                text-decoration: none
+        p
+            color: $color_li_inpt
+            a
+                color: $color_main
+                font-weight: 800

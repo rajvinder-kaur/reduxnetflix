@@ -16,7 +16,7 @@ function Banner({fetch}) {
   }
   getData();
  },[fetch])
- console.log(movie)
+//  console.log(movie)
  
  function truncate(string,n){
      return string?.length>n?string.substr(0,n-1)+'...':string;

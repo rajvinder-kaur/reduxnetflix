@@ -30,6 +30,10 @@
   border-radius: 3px;
   font-family: "Roboto", "HelveticaNeue-Light", sans-serif;
 }
+.login .container .signin a {
+  color: white;
+  text-decoration: none;
+}
 .login .gradient {
   width: 100%;
   height: 100vh;
@@ -68,4 +72,9 @@
   background-color: #da0303;
   border: none;
   cursor: pointer;
+  margin-top: 5px;
+}
+.login .form form .submit a {
+  text-decoration: none;
+  color: white;
 }/*# sourceMappingURL=login.css.map */

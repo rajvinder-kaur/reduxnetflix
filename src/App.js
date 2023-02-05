@@ -1,23 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
 import { BrowserRouter } from 'react-router-dom';
+import Login from './pages/Log';
+import Main from './pages/Main';
 import Page from './pages/Page';
-import Login from './pages/Login';
-
 
 function App() {
-  const User = null;
+ 
+
+
   return (
     < BrowserRouter>
-      {!User ? (
-        <Login />
-      ) : (
-        <div>
-          <Navbar page="home"/>
-          <Page />
-        </div>
-      )}
+      <Page />
     </BrowserRouter>
   );
 }

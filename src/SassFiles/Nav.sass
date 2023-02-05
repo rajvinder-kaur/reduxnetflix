@@ -1,14 +1,14 @@
 .nav
-      background-color: black
+      // background-color: black
       position: fixed
       top: 0
       padding: 10px
-      background-color: black
+      // background-color: black
       width: 100%
       height: 50px
       z-index: 6
       transition-timing-function: ease-in
-      transition: all 0.5s
+      transition: all 0.1s
       .content
             display: flex
             justify-content: space-between
@@ -18,8 +18,25 @@
                   cursor: pointer
                   left: 20px
                   z-index: 5
+                  top: 20px
             .user
                   position: fixed
                   width: 50px
                   right: 20px
-                  
+                  top: 10px
+            .signin
+            position: fixed
+            right: 20px
+            top: 20px
+            z-index: 2
+            button
+                padding: 0.5rem
+                background-color: #da0303
+                border: none
+                color: $color_main
+                border-radius: 3px
+                font-family: $font
+                a
+                  color: white
+.nav_black
+      background-color: black
