@@ -5,7 +5,11 @@ import Homesecreen from './Homescreen'
 
 
 function Main() {
-  const navigate =  useNavigate();
+  const handleLogout = () => {
+    sessionStorage.removeItem('Auth Token');
+    navigate('/login')
+}
+let navigate = useNavigate();
 
   useEffect(()=>{
     let authToken = sessionStorage.getItem('Auth Token')
@@ -19,7 +23,7 @@ function Main() {
 
   return (
     <div>
-      <Navbar title="Home" />
+      <Navbar title="Home" fun={handleLogout} />
       <Homesecreen/>
     </div>
   )

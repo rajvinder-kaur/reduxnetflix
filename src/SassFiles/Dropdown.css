@@ -1,0 +1,25 @@
+.drop {
+  list-style-type: none;
+  background-color: rgba(15, 12, 12, 0.699);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 30%;
+  padding-right: 40%;
+  margin-right: 10%;
+  position: relative;
+  right: 50%;
+  font-weight: 100;
+}
+.drop li {
+  color: white;
+  padding: 10%;
+}
+.drop li button {
+  padding: 0.5rem;
+  background-color: #da0303;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  font-family: "Roboto", "HelveticaNeue-Light", sans-serif;
+}/*# sourceMappingURL=Dropdown.css.map */
